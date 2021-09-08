@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgeCalculator">
+
+    <TextView
+        android:id="@+id/txt_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Age Calculator"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#344D0E"
+        android:textSize="25sp" />
+
+    <!-- linear layout to show datepickers-->
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_label"
+        android:layout_marginTop="55dp"
+        tools:ignore="InvalidId">
+
+        <!-- to select the first date-->
+        <Button
+            android:id="@+id/bt_birth"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00FF00"
+            android:layout_marginLeft="10dp"
+            android:text="01/01/2021"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <!-- displaying message as "to"-->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:text="To"
+            android:textColor="#000080"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- to display date number 2-->
+        <Button
+            android:id="@+id/bt_today"
+            android:layout_width="145dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00FF00"
+            android:layout_marginRight="25dp"
+            android:text="01/01/2021"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+    <!-- to perform the calculation-->
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_margin="35dp"
+        android:layout_centerHorizontal="true"
+        android:text="GO!" />
+
+    <!-- to display the message "Result"-->
+    <TextView
+        android:id="@+id/reslt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Result"
+        android:textColor="#FF0000"
+        android:layout_below="@+id/btn_calculate"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- To show the final output(age)-->
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/reslt"
+        android:textColor="#000080"
+        android:text="0 Years | 0 Months | 0 Days"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
